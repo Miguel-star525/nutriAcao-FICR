@@ -1,0 +1,62 @@
+/* zera as margens que o navegador coloca por padrão (Um RESET)*/
+* { 
+    margin: 0;      /**/
+    padding: 0;     /**/
+    box-sizing:border-box;      /**/
+}
+
+
+
+/* Corpo da Página*/
+body {
+    font-family: Arial, sans-serif;     /**/
+    background-color: #f8f1e3;      /**/
+    background-image: url("/images/NutriAção\ -\ cadastro\ -\ fundo.jpg");      /**/
+    background-size: cover;         /**/
+    background-position: center;        /**/
+    background-repeat: no-repeat;       /**/
+    min-height: 100vh       /**/
+}
+
+
+/*Cabeçalho (faixa verde)*/
+header {
+    background-color: #2f5d27;      /**/
+    color: #ffffff;     /**/
+    text-align: center;     /**/
+    padding: 2.5rem 1rem 1.5rem;        /**/
+}
+
+h1 {
+    font-size: 1.5rem;      /**/
+}
+
+
+/*Área Principal*/
+main {
+    display: flex;      /**/
+    justify-content: center;        /**/
+    padding: 1.5rem 1rem;       /**/
+}
+
+
+/*Cartão Cinza*/
+section {
+    background-color: #dcdacd;      /**/
+    width: 100%;        /**/
+    max-width: 24rem;       /**/
+    padding: 1.5rem;        /**/
+    border-radius: 1.5rem;      /**/
+}
+
+h2 {
+    font-size: 1.4rem;      /**/
+    margin-bottom: 1.5rem;      /**/
+}
+
+
+/*Rótulos (CNPJ, nome da ONG, EMAIL)*/
+label {
+    display: block;     /**/
+     
+}
