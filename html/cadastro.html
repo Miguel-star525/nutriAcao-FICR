@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro - NutriAção</title>
     <link rel="stylesheet" href="/css/cadastro.css">
 </head>
 <body>
     
+    <header>NutriAção - Cadastro</header> <!--O header serve como o cabeçalho da página, destacado ainda mais pela faixa verde no topo-->
+
+    <main> <!--É o conteúdo principal da página, detro do cartãozinho no centro-->
+        <section>
+            <h2>Cadastro de instituição Parceira (ONG)</h2> <!--Subtítulo, o segundo maior, depois de h1-->
+
+            <form action="#" method="post"> <!-- <form> reúne os campos que estarão na página de cadastro;
+                                                 <method="post"> anexa os dados ao corpo de requisição HTTP sem mostra-los na URL-->
+
+                <label for="cnpj">CNPJ</label> 
+                <!--<label> é o texto que descreve o campo; "for" conecta o texto em label com o nput de mesmo id-->   
+
+                <input 
+                type="text" 
+                id="cnpj" 
+                name="cnpj" 
+                placeholder="00.000.000/0001-00" 
+                maxlength="18"
+                pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}"
+                required>
+                <!--<input> é o campo de digitação; 
+                "placeholder" é a dica dentro do input; 
+                "maxlength" limita a quantidade máxima de caracteres digitados (18 com pontos e barra)
+                "pattern" expressão regular que o texto precisa seguir para o formulário ser enviado
+                "required" não permite enviar os inputs vazios-->
+                
+                <label for="nome">Nome da ONG</label>
+                <input type="text" id="nome" name="nome" placeholder="Mesa Solidária" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="contato@mesasolidaria.org" required>
+                <!--<type="email"> permite que o navegador valide o texto em formato de email (@gmal.com)-->
+
+                <button type="submit">Enviar Para Aprovação</button>
+                <!--<button>= botão; type="submit" envia o formilário ao ser clicado-->
+
+
+            </form>
+
+        </section>
+    </main>
+
+
+
 </body>
 </html>
