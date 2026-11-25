@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/*Corpo da Página*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f1e3;
+    background-image: url(/images/NutriAção\ -\ funcionario\ -\ fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+/*Área Principal*/
+main {
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 3rem 1rem 2rem;
+}
+
+/*Títulos da Página*/
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*Cartões Cinza*/
