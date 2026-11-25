@@ -1,82 +1,109 @@
 /* zera as margens que o navegador coloca por padrão (Um RESET)*/
 * { 
-    margin: 0;      /**/
-    padding: 0;     /**/
-    box-sizing:border-box;      /**/
+    margin: 0;      /*remove o espaço externo padrão de todos os elementos*/
+    padding: 0;     /*remove o espaço interno padrão*/
+    box-sizing:border-box;      /*faz padding e borda contarem dentro da largura do elemento, facilitando os cálculos*/
+}
+
+@media (min-width: 768px) {
+    body {
+        background-size: 30rem;
+        background-repeat: repeat;
+    }
 }
 
 
 
 /* Corpo da Página*/
 body {
-    font-family: Arial, sans-serif;     /**/
-    background-color: #f8f1e3;      /**/
-    background-image: url("/images/NutriAção\ -\ cadastro\ -\ fundo.jpg");      /**/
-    background-size: cover;         /**/
-    background-position: center;        /**/
-    background-repeat: no-repeat;       /**/
-    min-height: 100vh       /**/
+    font-family: Arial, sans-serif;     /*fonte provisória; trocamos pela do protótipo depois*/
+    background-color: #f8f1e3;      /*creme, usado caso a imagem não carregue*/
+    background-image: url("/images/NutriAção\ -\ cadastro\ -\ fundo.jpg");      /*imagem de fundo das frutas*/
+    background-size: cover;         /*a imagem cobre a tela toda, sem deixar vazios*/
+    background-position: center;        /*centraliza a imagem*/
+    background-repeat: no-repeat;       /*impede a imagem de repetir*/
+    min-height: 100vh;       /*altura mínima = 100% da altura da tela*/
+    background-attachment:fixed fixed;
 }
 
 
 /*Cabeçalho (faixa verde)*/
 header {
-    background-color: #2f5d27;      /**/
-    color: #ffffff;     /**/
-    text-align: center;     /**/
-    padding: 2.5rem 1rem 1.5rem;        /**/
+    background-color: #2f5d27;      /*verde escuro*/
+    color: #ffffff;     /*texto branco*/
+    text-align: center;     /*centraliza o texto*/
+    padding: 2.5rem 1rem 1.5rem;        /*espaço interno: topo, laterais, base (rem = unidade relativa ao tamanho da fonte)*/
 }
 
 h1 {
-    font-size: 1.5rem;      /**/
+    font-size: 1.5rem;      /*tamanho do título principal*/
 }
 
 
 /*Área Principal*/
 main {
-    display: flex;      /**/
-    justify-content: center;        /**/
-    padding: 1.5rem 1rem;       /**/
+    display: flex;      /*ativa o Flexbox, que organiza os filhos em linha ou coluna*/
+    justify-content: center;        /*centraliza o cartão na horizontal*/
+    padding: 1.5rem 1rem;       /*afasta o cartão das bordas da tela*/
 }
 
 
 /*Cartão Cinza*/
 section {
-    background-color: #dcdacd;      /**/
-    width: 100%;        /**/
-    max-width: 24rem;       /**/
-    padding: 1.5rem;        /**/
-    border-radius: 1.5rem;      /**/
+    background-color: #dcdacd;      /*cinza-claro do cartão*/
+    width: 100%;        /*ocupa toda a largura disponível no celular*/
+    max-width: 24rem;       /*mas nunca passa de 24rem; isso ajuda na responsividade*/
+    padding: 1.5rem;        /*espaço entre a borda do cartão e o conteúdo*/
+    border-radius: 1.5rem;      /*cantos bem arredondados*/
 }
 
 h2 {
-    font-size: 1.4rem;      /**/
-    margin-bottom: 1.5rem;      /**/
+    font-size: 1.4rem;      /*tamanho do subtítulo*/
+    margin-bottom: 1.5rem;      /*espaço abaixo do subtítulo*/
 }
 
 
 /*Rótulos (CNPJ, nome da ONG, EMAIL)*/
 label {
-    display: block;     /**/
-    font-size:1.2rem;       /**/
-    font-weight: bold;      /**/
-    margin-bottom: 0.5rem;      /**/
+    display: block;     /*label é "inline" por padrão; como block ele ocupa a linha inteira e aceita margens*/
+    font-size:1.2rem;       /*tamanho do texto do rótulo*/
+    font-weight: bold;      /*negrito, como no protótipo*/
+    margin-bottom: 0.5rem;      /*espaço entre o rótulo e o campo*/
 }
 
 
 /*Campos de Digitação*/
 input {
-    display: block;     /**/
-    width: 100%;        /**/
-    padding: 0.9rem 1rem;       /**/
-    margin-bottom: 1.2rem;      /**/
-    font-size: 1rem;        /**/
-    text-align: center;     /**/
-    background-color: #dcdacd;      /**/
-    border: 1px solid #2f5d27;      /**/
-    border-radius:1rem;     /**/
+    display: block;     /*o campo ocupa a própria linha*/
+    width: 100%;        /*largura total do cartão; acompanha o tamanho da tela*/
+    padding: 0.9rem 1rem;       /*espaço interno: define a altura do campo*/
+    margin-bottom: 1.2rem;      /*espaço abaixo, separando do próximo rótulo*/
+    font-size: 1rem;        /*tamanho do texto digitado*/
+    text-align: center;     /*centraliza o texto, como no protótipo*/
+    background-color: #dcdacd;      /*mesma cor do cartão*/
+    border: 1px solid #2f5d27;      /*borda fina verde*/
+    border-radius:1rem;     /*cantos arredondados*/
 }
 
 input:focus {
-    outline: 2px solid 2f5d27;      /**/
+    outline: 2px solid 2f5d27;      /*contorno ao clicar no campo, para o usuário saber onde está digitando*/
+}
+
+
+/*Botão*/
+button {
+    display: block;     /*ocupa a própria linha*/
+    width: 100%;        /*largura total do cartão*/
+    padding: 1rem;      /*altura do botão*/
+    font-size: 1.1rem;      /*tamanho do texto*/
+    font-weight: bold;      /*negrito*/
+    color: #ffffff;     /*texto branco*/
+    background-color: #2f5d27;      /*verde escuro*/
+    border: none;       /*remove a borda padrão*/
+    border-radius: 1rem;        /*cantos arredondados*/
+    cursor: pointer;        /*cursor de "mãozinha" ao passar por cima*/
+}
+
+button:hover {
+    background-color: #244a1f;      /*verde um pouco mais escuro quando o mouse passa por cima*/
 }
