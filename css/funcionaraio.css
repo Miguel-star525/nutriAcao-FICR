@@ -7,7 +7,7 @@
 
 /*Corpo da Página*/
 body {
-    font-family: Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background-color: #f8f1e3;
     background-image: url(/images/NutriAção\ -\ funcionario\ -\ fundo.jpg);
     background-size: cover;
@@ -36,3 +36,98 @@ h2 {
 }
 
 /*Cartões Cinza*/
+section{
+    background-color: #dcdacd;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/*Textos dentro dos cartões*/
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.05rem;
+    margin: bottom 0.2rem;
+}
+
+p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+
+/*Primeiro cartão*/
+.rsvp {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rsvp h3 {
+    margin-bottom: 0;
+}
+
+.rsvp p {
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+}
+
+/*Botão*/
+button {
+    display: block;
+    width: 80%;
+    margin: 1.5rem auto 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2f5d27;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #244a1f
+}
+
+/*Interruptor*/
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 3.4rem;
+    height: 1.9rem;
+    background-color: #a9a99f;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*Bolinha branca*/
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/*Estado Ligado*/
+input[type="checkbox"]:checked {
+    background-color: #34c759;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(1.5rem);
+}
