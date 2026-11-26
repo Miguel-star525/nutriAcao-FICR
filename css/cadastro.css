@@ -6,56 +6,6 @@
 }
 
 
-/*Media Query*/
-@media (min-width: 768px) {
-    /*@media: aplica as regras de dentro apenas se a condição for verdadeira; min-width: 768px = "a tela tem 768px ou mais"*/
-
-    body {
-        background-attachment: fixed;   /*a imagem fica fixa na janela e não estica junto com a altura da página*/
-        background-image:url(/images/NutriAção\ -\ computador.jpeg);        /*troca a imagem de fundo pela versão horizontal, só em telas largas*/
-        background-size:cover;      /*cobre a tela toda mantendo a proporção*/
-        background-position:center;     /*o centro da imagem fica no centro da tela*/
-    }
-
-    header {
-        padding: 3rem 2rem 2rem;        /*cabeçalho mais alto, com mais respiro nas laterais*/
-    }
-
-    h1 {
-        font-size: 2.2rem;              /*título principal maior*/
-    }
-
-    main {
-        padding: 3rem 2rem;             /*mais espaço entre o cartão e as bordas da tela*/
-    }
-
-    section {
-        max-width: 34rem;               /*cartão mais largo que no celular (era 24rem)*/
-        padding: 2.5rem;                /*mais espaço interno no cartão*/
-    }
-
-    h2 {
-        font-size: 1.8rem;              /*título do cartão maior*/
-        margin-bottom: 2rem;            /*mais espaço abaixo dele*/
-    }
-
-    label {
-        font-size: 1.3rem;              /*rótulos maiores*/
-    }
-
-    input {
-        padding: 1rem 1.2rem;           /*campos mais altos*/
-        font-size: 1.1rem;              /*texto digitado maior*/
-    }
-
-    button {
-        padding: 1.1rem;                /*botão mais alto*/
-        font-size: 1.25rem;             /*texto do botão maior*/
-    }
-}
-
-
-
 /* Corpo da Página*/
 body {
     font-family: Arial, sans-serif;     /*fonte provisória; trocamos pela do protótipo depois*/
@@ -65,7 +15,7 @@ body {
     background-position: center;        /*centraliza a imagem*/
     background-repeat: no-repeat;       /*impede a imagem de repetir*/
     min-height: 100vh;       /*altura mínima = 100% da altura da tela*/
-    background-attachment:fixed fixed;
+    background-attachment:fixed;
     display:flex;
     flex-direction:column;
 }
@@ -153,3 +103,53 @@ button {
 button:hover {
     background-color: #244a1f;      /*verde um pouco mais escuro quando o mouse passa por cima*/
 }
+
+
+/*Media Query*/
+@media (min-width: 768px) {
+    /*@media: aplica as regras de dentro apenas se a condição for verdadeira; min-width: 768px = "a tela tem 768px ou mais"*/
+
+    body {
+        background-attachment: fixed;   /*a imagem fica fixa na janela e não estica junto com a altura da página*/
+        background-image:url(/images/NutriAção\ -\ computador.jpeg);        /*troca a imagem de fundo pela versão horizontal, só em telas largas*/
+        background-size:cover;      /*cobre a tela toda mantendo a proporção*/
+        background-position:center;     /*o centro da imagem fica no centro da tela*/
+    }
+
+    header {
+        padding: 3rem 2rem 2rem;        /*cabeçalho mais alto, com mais respiro nas laterais*/
+    }
+
+    h1 {
+        font-size: 2.2rem;              /*título principal maior*/
+    }
+
+    main {
+        padding: 3rem 2rem;             /*mais espaço entre o cartão e as bordas da tela*/
+    }
+
+    section {
+        max-width: 34rem;               /*cartão mais largo que no celular (era 24rem)*/
+        padding: 2.5rem;                /*mais espaço interno no cartão*/
+    }
+
+    h2 {
+        font-size: 1.8rem;              /*título do cartão maior*/
+        margin-bottom: 2rem;            /*mais espaço abaixo dele*/
+    }
+
+    label {
+        font-size: 1.3rem;              /*rótulos maiores*/
+    }
+
+    input {
+        padding: 1rem 1.2rem;           /*campos mais altos*/
+        font-size: 1.1rem;              /*texto digitado maior*/
+    }
+
+    button {
+        padding: 1.1rem;                /*botão mais alto*/
+        font-size: 1.25rem;             /*texto do botão maior*/
+    }
+}
+
