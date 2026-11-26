@@ -9,7 +9,10 @@
     /*aplica as regras de dentro apenas se a tela tiver 768px ou mais*/
 
     body {
-        background-attachment: fixed;   /* a imagem fica fixa na janela e não estica com a altura da página*/
+        background-attachment: fixed;       /*a imagem fica fixa na janela e não estica com a altura da página*/
+        background-image:url("/images/NutriAção\ -\ computador.jpeg");      /*troca a imagem de fundo pela versão horizontal, só em telas largas*/
+        background-size:cover;      /*cobre a tela toda mantendo a proporção*/
+        background-position:center;     /**/
     }
 
     main {
